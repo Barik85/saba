@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Saba</title>
+</head>
+
+<body>
+    <style>
+        #myProgress {
+            width: 200px;
+            background-color: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px 0px;
+        }
+        #myBar {
+            width: 1%;
+            height: 2px;
+            background-color: #585858;
+        }
+        body {
+            background-color: #000000;
+        }
+        .preloader{
+            width: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #preloader-logo{
+            width: 1%;
+            height: 36px;
+            
+        }
+        .logo-box {
+            width: 90%;
+            margin: 0px auto;
+        }
+    </style>
+    <div class="preloader">
+        <div class="logo-box">
+            <img src="img/Logo-Saba.png" alt="" id="preloader-logo">
+        </div>
+        <div id="myProgress">
+            <div id="myBar"></div>
+        </div>
+    </div>
+    <script>
+        function move(name) {
+            var elem = document.getElementById(name);
+            var width = 1;
+            var id = setInterval(frame, 10);
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                } else {
+                    width++;
+                    elem.style.width = width + '%';
+                }
+            }
+        }
+        move('myBar');
+        move('preloader-logo');
+    </script>
+
+
+
+</body>
+</html>
