@@ -32,16 +32,16 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
+            overflow: hidden;
         }
         #preloader-logo{
             width: 100%;
-            opacity: 0.5;
-            animation: fade 2500ms;
+            animation: fade 2500ms ease-in-out;
         }
         .logo-box {
             width: 80%;
             margin: 0px auto;
-            overflow: hidden;
+            /* overflow: hidden; */
         }
         @keyframes moving {
             0% { transform: translate(-200px, 0);}           
@@ -49,10 +49,10 @@
         }
         @keyframes fade {
             0% {opacity: 0;
-                transform: translate(-200px, 0);
+                transform: translate(-50px, 0);
             }
-            70% {opacity: 0;}
-            100% {opacity: 0.5;
+            40% {opacity: 0;}
+            100% {opacity: 1;
                   transform: translate(0px, 0px);
             }
         }
@@ -60,7 +60,7 @@
     </style>
     <div class="preloader">
         <div class="logo-box">
-            <img src="img/Logo-Saba.png" alt="" id="preloader-logo">
+            <img src="img/Logo-Saba-grey.png" alt="" id="preloader-logo">
         </div>
         <div id="myProgress">
             <div id="myBar"></div>
