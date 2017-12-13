@@ -1,0 +1,19 @@
+{% comment %}
+  The contents of the blog.liquid template can be found in /sections/blog-template.liquid
+{% endcomment %}
+
+
+{% if blog.url contains 'events' %}
+
+	{% section 'blog-template-events' %}
+
+{% elsif blog.url contains 'master' %}
+	
+	{% section 'blog-template-masterclasses' %}
+
+{% else %}
+	
+	{% section 'blog-template' %}
+
+{% endif %}
+

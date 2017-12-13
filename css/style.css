@@ -1,0 +1,113 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+.myProgress {
+    width: 200px;
+    background-color: #585858;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0px;
+}
+.myBar {
+    width: 100%;
+    height: 2px;
+    background-color: #ddd;
+    animation: moving 2500ms ease-in-out;            
+}
+.bar-delay{
+    animation: moving 2500ms ease-in-out;       
+    animation-delay: 2s;         
+}
+.bar-delay-wrapper{
+    display: inline-block;
+}
+.loader-wrapper {
+    background-color: #000000;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+.preloader{
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+}
+#preloader-logo{
+    width: 100%;
+    animation: fade 2500ms ease-in-out;
+}
+.preloader-logo-box {
+    width: 80%;
+    margin: 0px auto;
+    /* overflow: hidden; */
+}
+@keyframes moving {
+    0% { transform: translate(-200px, 0);}           
+    100% { transform: translate(0px, 0px);}
+}
+@keyframes fade {
+    0% {opacity: 0;
+        transform: translate(-50px, 0);
+    }
+    40% {opacity: 0;}
+    100% {opacity: 1;
+          transform: translate(0px, 0px);
+    }
+}
+.preloader-slide1{
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    position: absolute;
+    z-index: 1;
+}
+.preloader-slide2 {
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.slide2-title {
+    max-width: 425px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 30px;
+}
+.author {
+    color: #585858;
+    text-transform: uppercase;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+.slide2-content-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    justify-content: center;
+}
+.slide2-img-box img {
+    width: 100%;
+}
+.slide2-img-box{
+    overflow: hidden;
+}
+.next {
+    background-color: transparent;
+    border: 1px solid #202020;
+    padding: 15px 28px;
+    color: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;  
+    transition: all 0.5s ease-in-out;  
+}
+.next:hover {
+    color: #ddd;
+    border-color: #585858;
+}

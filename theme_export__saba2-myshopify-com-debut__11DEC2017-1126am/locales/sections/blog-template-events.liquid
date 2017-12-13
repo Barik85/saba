@@ -1,0 +1,36 @@
+<div class="page-width">
+	<h1>Announcements</h1>
+
+	{% for article in blogs.events.articles %}
+		{% if article.metafields["global"]["Is-Past-Event"] != "true" %}
+    		<div class="article">
+              <h3><a href="{{ article.url }}">{{ article.title }}</a></h3> 
+              
+              in {{ article.metafields["global"]["Location"] }} on {{ article.metafields["global"]["Date"] }}
+      			
+              <div class="article-body textile">
+        			{{ article.content }}
+      			</div>
+        </div>           
+   	    {% endif %}
+	{% endfor %}
+
+	<br/><br/>
+
+	<h1>Archive (Past Events)</h1>
+
+
+	{% for article in blogs.events.articles %}
+		{% if article.metafields["global"]["Is-Past-Event"] != "false" %}
+    		<div class="article">
+              <h3><a href="{{ article.url }}">{{ article.title }}</a></h3> 
+              
+              in {{ article.metafields["global"]["Location"] }} on {{ article.metafields["global"]["Date"] }}
+      			
+              <div class="article-body textile">
+        			{{ article.content }}
+      			</div>
+        </div>           
+   	    {% endif %}
+	{% endfor %}
+</div>

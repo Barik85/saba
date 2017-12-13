@@ -1,0 +1,87 @@
+<div class="page-width">
+  <div class="grid">
+    <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
+      
+      <!-- <div class="section-header text-center">
+        <h1>{{ page.title }}</h1>
+      </div> -->
+
+      <div class="rte">
+        {{ page.content }}
+      </div>
+      
+      {% section 'slideshow-homepage' %}
+      
+      <br/>
+      <h1>Ближайшие мероприятия</h1>
+      
+      <div class="rte">
+      <table>
+        <tr>
+      {% assign counter = 0 %}       
+      {% for article in blogs.events.articles %}      
+    	{% if article.metafields["global"]["Is-Past-Event"] != "true" and counter < 3%}
+        	<td width="33%" style="text-align: center !important;">
+              <div class="article">
+                <a href="{{ article.url }}" title="{{ article.title }}">
+                	<img alt=""{{ article.title }}"" src="{{ article.image | img_url: 'medium' }}" style="max-width: 200px !important" />
+                </a>
+                <!-- Look here: https://help.shopify.com/themes/liquid/objects/article -->
+                <!-- {{ article.title }} -->
+                <!-- {{ article.content }} -->
+                <!-- {{ article.metafields["global"]["Location"] }} -->
+                <!-- {{ article.metafields["global"]["Date"] }} -->
+
+              </div>
+          	</td>
+        	{% assign counter = counter| plus: 1 %} 
+   	    {% endif %}
+      {% endfor %}
+        </tr>
+        <tr>
+          <td colspan="3" align="center" style="text-align: center !important;">
+             <h3><a href="/blogs/events">Show MORE</a></h3>
+          </td>
+        </tr>
+        
+      </table>
+      </div>
+              
+      <h1>Рецепты</h1>
+              
+      <div class="rte">
+      <table>
+        <tr>
+      {% assign counter = 0 %}       
+      {% for article in blogs.recipes.articles %}      
+    	{% if article.metafields["global"]["Is-Past-Event"] != "true" and counter < 3%}
+        	<td width="33%" style="text-align: center !important;">
+              <div class="article">
+                <a href="{{ article.url }}" title="{{ article.title }}">
+                	<img alt=""{{ article.title }}"" src="{{ article.image | img_url: 'medium' }}" style="max-width: 200px !important" />
+                </a>
+                <!-- Look here: https://help.shopify.com/themes/liquid/objects/article -->
+                <!-- {{ article.title }} -->
+                <!-- {{ article.content }} -->
+                <!-- {{ article.metafields["global"]["Location"] }} -->
+                <!-- {{ article.metafields["global"]["Date"] }} -->
+
+              </div>
+          	</td>
+        	{% assign counter = counter| plus: 1 %} 
+   	    {% endif %}
+      {% endfor %}
+        </tr>
+        <tr>
+          <td colspan="3" align="center" style="text-align: center !important;">
+             <h3><a href="/blogs/recipes">Show MORE</a></h3>
+          </td>
+        </tr>
+        
+      </table>
+      </div>
+     
+      
+    </div>
+  </div>
+</div>

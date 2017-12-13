@@ -5,83 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
     <title>Saba</title>
 </head>
 
 <body>
-    <style>
-        #myProgress {
-            width: 200px;
-            background-color: #585858;
-            border-radius: 10px;
-            overflow: hidden;
-            margin: 10px 0px;
-        }
-        #myBar {
-            width: 100%;
-            height: 2px;
-            background-color: #ddd;
-            animation: moving 2500ms ease-in-out;            
-        }
-        body {
-            background-color: #000000;
-        }
-        .preloader{
-            width: 200px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            overflow: hidden;
-        }
-        #preloader-logo{
-            width: 100%;
-            animation: fade 2500ms ease-in-out;
-        }
-        .logo-box {
-            width: 80%;
-            margin: 0px auto;
-            /* overflow: hidden; */
-        }
-        @keyframes moving {
-            0% { transform: translate(-200px, 0);}           
-            100% { transform: translate(0px, 0px);}
-        }
-        @keyframes fade {
-            0% {opacity: 0;
-                transform: translate(-50px, 0);
-            }
-            40% {opacity: 0;}
-            100% {opacity: 1;
-                  transform: translate(0px, 0px);
-            }
-        }
-        
-    </style>
-    <div class="preloader">
-        <div class="logo-box">
-            <img src="img/Logo-Saba-grey.png" alt="" id="preloader-logo">
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <div class="loader-wrapper">
+        <div class="preloader-slide1">
+            <div class="preloader">
+                <div class="preloader-logo-box">
+                    <img src="img/Logo-Saba-grey.png" alt="" id="preloader-logo">
+                </div>
+                <div class="myProgress">
+                    <div class="myBar"></div>
+                </div>
+            </div>
         </div>
-        <div id="myProgress">
-            <div id="myBar"></div>
+        <script>
+            $(window).load(function () {
+                setTimeout(function () {
+                    $(".preloader-slide1").delay(100).fadeOut().remove();
+                }, 3000);
+            });
+        </script>
+        <div class="preloader-slide2">
+            <div class="slide2-content-wrapper">
+                <div class="slide2-img-box">
+                    <img src="img/Preload_bg.jpg" alt="">
+                </div>
+                <div>
+                    <p class="slide2-title">
+                        Воздушное пирожное, небольшого размера, начиненное нежным кремом, что может быть вкусней…
+                        <br>
+                        <span class="author">Saba Janjgava</span>
+                    </p>
+                    <button class="next">
+                        Далее
+                        <span class="myProgress">
+                            <span class="myBar bar-delay"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
     <!-- <script>
-        function move(name) {
-            var elem = document.getElementById(name);
-            var width = 1;
-            var id = setInterval(frame, 10);
-            function frame() {
-                if (width >= 100) {
-                    clearInterval(id);
-                } else {
-                    width++;
-                    elem.style.width = width + '%';
-                }
-            }
-        }
-        move('myBar');
-        move('preloader-logo');
+        $(window).load(function () {
+            setTimeout(function () {
+                $(".loader-wrapper").delay(100).fadeOut().remove();
+            }, 5000);
+        });
     </script> -->
 </body>
+
 </html>
