@@ -34,29 +34,74 @@
                 <div class="slide2-img-box">
                     <img src="img/Preload_bg.jpg" alt="">
                 </div>
-                <div>
+                <div class="slide2-content">
+
                     <p class="slide2-title">
                         Воздушное пирожное, небольшого размера, начиненное нежным кремом, что может быть вкусней…
                         <br>
                         <span class="author">Saba Janjgava</span>
                     </p>
-                    <button class="next">
+                    <button class="next-button">
                         Далее
-                        <span class="myProgress">
-                            <span class="myBar bar-delay"></span>
-                        </span>
+                        <div class="button-load-bar">
+                                <div class="button-moving-bar"></div>
+                        </div>
                     </button>
                 </div>
             </div>
         </div>
     </div>
-    <!-- <script>
+    <script>
         $(window).load(function () {
             setTimeout(function () {
                 $(".loader-wrapper").delay(100).fadeOut().remove();
-            }, 5000);
+            }, 8000);
         });
-    </script> -->
+    </script>
+    <header class="header-index">
+        <ul class="user-menu clearfix">
+            <li class="user-menu__item"><a class="user-menu__link" href="/account/login">Вход</a></li>
+            <li class="user-menu__item"><a class="user-menu__link" href="/cart">Мои видео</a></li>
+        </ul>
+        <ul class="language-selection">
+            <li class="language-item"><a class="user-menu__link" href="#">En</a></li>
+            <li class="language-item"><a class="user-menu__link" href="#">Esp</a></li>
+            <li class="language-item"><a class="user-menu__link" href="#">Fr</a></li>
+        </ul>
+    </header>
+    <section class="content">
+        <div class="content-wrapper">
+            <div>
+                <ul class="main-menu">
+                    <li class="main-menu-item"><span class="item-number">01</span><a class="main-menu-link" href="">Все про сабу</a></li>
+                    <li class="main-menu-item"><span class="item-number">02</span><a class="main-menu-link" href="">Статьи</a></li>
+                    <li class="main-menu-item"><span class="item-number">03</span><a class="main-menu-link" href="">Для бизнеса</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="center-logo-box">
+                    <img src="img/Logo-circle.png" alt="logo">
+                </div>
+            </div>
+            <div>
+                <ul class="main-menu right-menu">
+                    <li class="main-menu-item"><span class="item-number">04</span><a class="main-menu-link" href="">Мероприятия</a></li>
+                    <li class="main-menu-item"><span class="item-number">05</span><a class="main-menu-link" href="">Видео уроки</a></li>
+                    <li class="main-menu-item"><span class="item-number">06</span><a class="main-menu-link" href="">Отзывы</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="left-vertical-txt">
+            Консалтинг
+        </p>
+        <p class="right-vertical-txt">
+            Обучение
+        </p>
+        <p class="copyrights clearfix">
+                Saba 2018 All rights reserved
+        </p>
+    </section>
+    
 </body>
 
 </html>
