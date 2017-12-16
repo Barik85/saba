@@ -10,7 +10,6 @@
 </head>
 
 <body>
-    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
     <div class="loader-wrapper">
         <div class="preloader-slide1">
             <div class="preloader">
@@ -23,11 +22,12 @@
             </div>
         </div>
         <script>
-            $(window).load(function () {
-                setTimeout(function () {
-                    $(".preloader-slide1").delay(100).fadeOut().remove();
-                }, 3000);
-            });
+            const slide1 = document.querySelector('.preloader-slide1');
+            setTimeout( function(){
+                if(!slide1.classList.contains('done')){
+                    slide1.classList.add('done');
+                }
+            }, 2500);
         </script>
         <div class="preloader-slide2">
             <div class="slide2-content-wrapper">
@@ -50,14 +50,24 @@
                 </div>
             </div>
         </div>
+        <script>
+            const slide2 = document.querySelector('.preloader-slide2');
+            setTimeout(function () {
+                if (!slide2.classList.contains('done')) {
+                    slide2.classList.add('done');
+                }
+            }, 7000);
+        </script>
     </div>
     <script>
-        $(window).load(function () {
+            const slide3 = document.querySelector('.loader-wrapper');
             setTimeout(function () {
-                $(".loader-wrapper").delay(100).fadeOut().remove();
+                if (!slide3.classList.contains('remove')) {
+                    slide3.classList.add('remove');
+                }
             }, 8000);
-        });
     </script>
+    
     <header class="header-index">
         <ul class="user-menu clearfix">
             <li class="user-menu__item"><a class="user-menu__link" href="/account/login">Вход</a></li>
