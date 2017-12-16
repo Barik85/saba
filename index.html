@@ -30,11 +30,6 @@
                         slide1.classList.add('done');
                     }
                 }, 2500);
-                const slideNext = document.querySelector('.preloader-slide2');
-                slideNext.style.opacity = '1';
-                setTimeout(function(){
-                    slide1.style.display = 'none'
-                }, 4000);
             </script>
             <div class="slide2-content-wrapper">
                 <div class="slide2-img-box">
@@ -56,6 +51,13 @@
                 </div>
             </div>
         </div>
+        <script>
+            const slideNext = document.querySelector('.preloader-slide2');
+                slideNext.style.opacity = '1';
+                setTimeout(function(){
+                    slide1.style.display = 'block'
+                }, 3000);
+        </script>
     </div>
     <script>
             const step3 = document.querySelector('.preloader-slide2');
