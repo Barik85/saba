@@ -30,8 +30,8 @@ body {
     width: 100%;
     height: 2px;
     background-color: #ddd;
-    -webkit-animation: moving 7000ms ease-in-out;
-            animation: moving 7000ms ease-in-out;                
+    -webkit-animation: moving 6000ms ease-in-out;
+            animation: moving 6000ms ease-in-out;                
 }
 .bar-delay-wrapper{
     display: inline-block;
@@ -111,6 +111,7 @@ body {
     z-index: 2;
     background-color: #000000;
     opacity: 0;   
+    display: none;
     transition: 1s all ease-in-out;
 }
 .slide2-title {

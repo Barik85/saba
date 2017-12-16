@@ -21,16 +21,16 @@
                 </div>
             </div>
         </div>
-       
-        <div class="preloader-slide2">
-            <script>
+        <script>
                 const slide1 = document.querySelector('.preloader-slide1');
                 setTimeout(function () {
                     if (!slide1.classList.contains('done')) {
                         slide1.classList.add('done');
                     }
                 }, 2500);
-            </script>
+        </script>
+        <div class="preloader-slide2">
+            
             <div class="slide2-content-wrapper">
                 <div class="slide2-img-box">
                     <img src="img/Preload_bg.jpg" alt="">
@@ -53,23 +53,23 @@
         </div>
         <script>
             const slideNext = document.querySelector('.preloader-slide2');
-                slideNext.style.opacity = '1';
                 setTimeout(function(){
-                    slide1.style.display = 'block'
-                }, 3000);
+                    slideNext.style.display = 'block';
+                    slideNext.style.opacity = '1';
+                }, 2600);
         </script>
     </div>
     <script>
             const step3 = document.querySelector('.preloader-slide2');
             setTimeout(function () {
                 step3.style.opacity = '0';
-            }, 7000);
+            }, 8000);
             const slide3 = document.querySelector('.loader-wrapper');
             setTimeout(function () {
                 if (!slide3.classList.contains('remove')) {
                     slide3.classList.add('remove');
                 }
-            }, 8000);
+            }, 9000);
     </script>
     
     <header class="header-index">
