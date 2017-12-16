@@ -21,15 +21,21 @@
                 </div>
             </div>
         </div>
-        <script>
-            const slide1 = document.querySelector('.preloader-slide1');
-            setTimeout( function(){
-                if(!slide1.classList.contains('done')){
-                    slide1.classList.add('done');
-                }
-            }, 2500);
-        </script>
+       
         <div class="preloader-slide2">
+            <script>
+                const slide1 = document.querySelector('.preloader-slide1');
+                setTimeout(function () {
+                    if (!slide1.classList.contains('done')) {
+                        slide1.classList.add('done');
+                    }
+                }, 2500);
+                const slideNext = document.querySelector('.preloader-slide2');
+                slideNext.style.opacity = '1';
+                setTimeout(function(){
+                    slide1.style.display = 'none'
+                }, 4000);
+            </script>
             <div class="slide2-content-wrapper">
                 <div class="slide2-img-box">
                     <img src="img/Preload_bg.jpg" alt="">
@@ -50,16 +56,12 @@
                 </div>
             </div>
         </div>
-        <script>
-            const slide2 = document.querySelector('.preloader-slide2');
-            setTimeout(function () {
-                if (!slide2.classList.contains('done')) {
-                    slide2.classList.add('done');
-                }
-            }, 7000);
-        </script>
     </div>
     <script>
+            const step3 = document.querySelector('.preloader-slide2');
+            setTimeout(function () {
+                step3.style.opacity = '0';
+            }, 7000);
             const slide3 = document.querySelector('.loader-wrapper');
             setTimeout(function () {
                 if (!slide3.classList.contains('remove')) {
