@@ -28,6 +28,11 @@
                         slide1.classList.add('done');
                     }
                 }, 2500);
+                setTimeout(function () {
+                          if (!slide1.classList.contains('remove')) {
+                              slide1.classList.add('remove');
+                          }
+                }, 3200);
         </script>
         <div class="preloader-slide2">
             
@@ -38,10 +43,9 @@
                 <div class="slide2-content">
 
                     <p class="slide2-title">
-                        Воздушное пирожное, небольшого размера, начиненное нежным кремом, что может быть вкусней…
-                        <br>
-                        <span class="author">Saba Janjgava</span>
+                        
                     </p>
+                    <span class="author">Saba Janjgava</span>
                     <button class="next-button">
                         Далее
                         <div class="button-load-bar">
@@ -53,24 +57,36 @@
         </div>
         <script>
             const slideNext = document.querySelector('.preloader-slide2');
-                setTimeout(function(){
-                    slideNext.style.display = 'block';
-                    slideNext.style.opacity = '1';
-                }, 2600);
+            setTimeout(function () {
+                slideNext.style.display = 'block';
+                slideNext.style.opacity = '1';
+            }, 2600);
         </script>
-    </div>
-    <script>
+        </div>
+        <script>
+            const txt = 'Воздушное пирожное, небольшого размера, начиненное нежным кремом, что может быть вкусней…';
+            let txtArray = txt.split('');
+            let paragraph = document.querySelector('.slide2-title');
+            function typing() {
+                if (txtArray.length > 0) {
+                    paragraph.innerHTML += txtArray.shift();
+                } else {
+                    return;
+                }
+                setTimeout(typing, 80);
+            }
+            setTimeout(typing(), 10000);
             const step3 = document.querySelector('.preloader-slide2');
             setTimeout(function () {
                 step3.style.opacity = '0';
-            }, 8000);
-            const slide3 = document.querySelector('.loader-wrapper');
-            setTimeout(function () {
-                if (!slide3.classList.contains('remove')) {
-                    slide3.classList.add('remove');
-                }
-            }, 9000);
-    </script>
+            }, 9500);
+        </script>
+        <script>
+                const step3 = document.querySelector('.preloader-slide2');
+                setTimeout(function () {
+                    step3.style.opacity = '0';
+                }, 8000);
+        </script>
     
     <header class="header-index">
         <ul class="user-menu clearfix">
@@ -116,5 +132,16 @@
     </section>
     
 </body>
-
+<script>
+    const slide3 = document.querySelector('.loader-wrapper');
+    document.body.onload = function(){
+            setTimeout(function () {
+                if (!slide3.classList.contains('remove')) {
+                    slide3.classList.add('remove');
+                }
+            }, 9000);
+    }
+    let scip = document.querySelector(".next-button");
+    scip.onclick = function(event){slide3.classList.add("remove")};
+</script>
 </html>
