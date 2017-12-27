@@ -133,8 +133,8 @@ body {
   transition: 1s all ease-in-out; }
 
 .slide2-title {
-  max-width: 425px;
-  min-height: 175px;
+  width: 100%;
+  min-height: 150px;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 30px; }
 
@@ -186,7 +186,8 @@ body {
   border-color: #585858; }
 
 .slide2-content {
-  position: relative; }
+  position: relative;
+  width: 50%; }
 
 .user-menu {
   float: right; }
@@ -205,7 +206,7 @@ body {
 .header-index {
   background-color: #000;
   max-width: 1179px;
-  padding: 55px 15px 15px 15px;
+  padding: 25px 15px 15px 15px;
   margin: 0px auto 0px auto;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
@@ -231,7 +232,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  margin-top: 100px;
+  margin-top: 50px;
   background-position: 30% center;
   position: relative; }
 
