@@ -318,7 +318,10 @@ body {
   transform: rotate(-90deg);
   position: absolute;
   left: -48px;
-  top: 50%; }
+  top: 74%;
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out; }
 
 .right-vertical-txt {
   font-family: Helvetica, Arial, sans-serif;
@@ -330,7 +333,13 @@ body {
   transform: rotate(-90deg);
   position: absolute;
   right: -28px;
-  top: 15%; }
+  top: 15%;
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out; }
+
+.active {
+  top: 45%; }
 
 .copyrights {
   text-decoration: none;

@@ -301,7 +301,8 @@ body {
             transform: rotate(-90deg);
     position: absolute;
     left: -48px;
-    top: 50%;
+    top: 74%;
+    transition: all 1s ease-in-out;
 }
 .right-vertical-txt {
     font-family: Helvetica, Arial, sans-serif;
@@ -313,6 +314,10 @@ body {
     position: absolute;
     right: -28px;
     top: 15%;
+    transition: all 1s ease-in-out;    
+}
+.active {
+    top:45%;
 }
 .copyrights {
     text-decoration: none;
