@@ -22,23 +22,29 @@
             </div>
         </div>
         <script>
+                const preloader = document.querySelector('.preloader');
                 const slide1 = document.querySelector('.preloader-slide1');
                 setTimeout(function () {
-                    if (!slide1.classList.contains('done')) {
-                        slide1.classList.add('done');
+                    if (!preloader.classList.contains('done')) {
+                        preloader.classList.add('done');
                     }
                 }, 2500);
+                setTimeout(function () {
+                          if (!slide1.classList.contains('done')) {
+                              slide1.classList.add('done');
+                          }
+                      }, 3500);
                 setTimeout(function () {
                           if (!slide1.classList.contains('remove')) {
                               slide1.classList.add('remove');
                           }
-                }, 3200);
+                      }, 4500);
         </script>
         <div class="preloader-slide2">
             
             <div class="slide2-content-wrapper">
                 <div class="slide2-img-box">
-                    <img src="img/Preload_bg.jpg" alt="">
+                    <img src="img/Preload_bg.png" alt="">
                 </div>
                 <div class="slide2-content">
 
@@ -57,37 +63,33 @@
         </div>
         <script>
             const slideNext = document.querySelector('.preloader-slide2');
-            setTimeout(function () {
-                slideNext.style.display = 'block';
-                slideNext.style.opacity = '1';
-            }, 2600);
+                setTimeout(function(){
+                    slideNext.style.display = 'block';
+                    slideNext.style.opacity = '1';
+                }, 2700);
         </script>
         </div>
         <script>
-            const txt = 'Воздушное пирожное, небольшого размера, начиненное нежным кремом, что может быть вкусней…';
-            let txtArray = txt.split('');
-            let paragraph = document.querySelector('.slide2-title');
-            function typing() {
-                if (txtArray.length > 0) {
-                    paragraph.innerHTML += txtArray.shift();
-                } else {
-                    return;
-                }
-                setTimeout(typing, 80);
-            }
-            setTimeout(typing(), 10000);
-            const step3 = document.querySelector('.preloader-slide2');
+            const txt = 'Самое большое счастье для человека- позволить себе заниматься любимым делом. Не бойтесь перемен, мечтайте, дерзайте, идите только вперёд, и Все получится';
+			let txtArray = txt.split('');
+			let paragraph = document.querySelector('.slide2-title');
+			function typing(){
+			    if(txtArray.length > 0){
+			       paragraph.innerHTML += txtArray.shift();    
+			    } else {
+			      return;}
+			    setTimeout(typing, 80);
+			}
+			setTimeout(typing(), 10000);
+            const step3 = document.querySelector('.slide2-content-wrapper');
             setTimeout(function () {
                 step3.style.opacity = '0';
-            }, 9500);
-        </script>
-        <script>
-                const step3 = document.querySelector('.preloader-slide2');
-                setTimeout(function () {
-                    step3.style.opacity = '0';
-                }, 8000);
-        </script>
-    
+            }, 14000);
+            const step4 = document.querySelector('.preloader-slide2');
+            setTimeout(function () {
+                step4.style.opacity = '0';
+            }, 15000);
+        </script>    
     <header class="header-index">
         <ul class="user-menu clearfix">
             <li class="user-menu__item"><a class="user-menu__link" href="/account/login">Вход</a></li>
@@ -134,13 +136,12 @@
 </body>
 <script>
     const slide3 = document.querySelector('.loader-wrapper');
-    document.body.onload = function(){
-            setTimeout(function () {
+    document.body.onload = setTimeout(function () {
                 if (!slide3.classList.contains('remove')) {
                     slide3.classList.add('remove');
                 }
-            }, 9000);
-    }
+            }, 15500);
+    
     let scip = document.querySelector(".next-button");
     scip.onclick = function(event){slide3.classList.add("remove")};
 </script>
