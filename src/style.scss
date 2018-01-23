@@ -44,6 +44,7 @@ body {
     height: 100%;
     -webkit-transition: 1s all ease-in-out;
     transition: 1s all ease-in-out;    
+    box-sizing: border-box;
 }
 .preloader{
     width: 200px;
@@ -342,11 +343,10 @@ body {
     color: #202020;
 }
 #canvas {
-    width: 333px;
-    height: 333px;
+    height: auto !important;
     display: block;
     background-color: transparent;
-    margin: 40px auto;
+    margin: 0px auto 40px auto;
 }
 @media (max-width: 1050px) {
     .left-vertical-txt {
@@ -354,6 +354,11 @@ body {
     }
     .right-vertical-txt {
         right: -56px;
+    }
+}
+@media (max-width: 850px){
+    #canvas {
+        width: 100% !important;
     }
 }
 @media (max-width: 720px) {
@@ -411,6 +416,9 @@ body {
     }
     .slide2-content {
         padding-left: 10px;
+    }
+    #canvas {
+        width: 58% !important;
     }
 }
 
