@@ -363,6 +363,13 @@ body {
 .darkened {
   color: #202020; }
 
+#canvas {
+  width: 333px;
+  height: 333px;
+  display: block;
+  background-color: transparent;
+  margin: 40px auto; }
+
 @media (max-width: 1050px) {
   .left-vertical-txt {
     left: -84px; }
@@ -412,9 +419,6 @@ body {
     width: 60%; }
   .slide2-content {
     padding-left: 10px; } }
-
-ul li.darkened {
-  color: #202020; }
 
 .title-section {
   position: relative; }
